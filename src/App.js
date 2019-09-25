@@ -4,6 +4,7 @@ import './App.css';
 import Menu from './components/header/header.js';
 import Header from './components/menu/menu.js';
 import Content from './components/content/content.js'
+import Footer from './components/footer/footer.js'
 
 class App extends React.Component {
   render() {
@@ -11,10 +12,13 @@ class App extends React.Component {
      <div className="topmenu"> 
       <Menu/>
       <Header/>
-      < Content anh = "img/01.jpg"
+      < Content vt = "order-lg-2" anh = 'img/01.jpg'
       tieude = "For those about to rock..."  />
-      < Content anh = 'img/02.jpg'
+      < Content vt = "order-lg-1"
+      anh = 'img/02.jpg'
       tieude = "We salute you!" />
+
+      <Footer/>
       </div>
     );
   }

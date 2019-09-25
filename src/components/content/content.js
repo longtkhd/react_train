@@ -6,7 +6,7 @@ export default class Content extends Component {
             <section>
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-lg-6 {this.props.vt}">
+                        <div className={" col-lg-6 " + this.props.vt }>
                             <div className="p-5">
                                 <img className="img-fluid rounded-circle" src={this.props.anh} alt="" />
                             </div>
