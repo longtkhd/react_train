@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Link } from "react-router-dom";
+import {  Link,NavLink } from "react-router-dom";
 
 
 import './../css/style.css';
@@ -14,13 +14,14 @@ class Nav extends React.Component {
             <div className="conteiner-fluid header fixed-top">
                 <div className=" row">
                     <div className="brand col">
-                        <a className="color" href="/">Gourmet au Catering</a>
+                        <NavLink  to="/" activeClassName="selected">Gourmet au Catering</NavLink>
                     </div>
                     <div className=" row d-none d-sm-inline">
                         <div className="brand  ">
-                            <a className="color" href="about">About</a>
-                            <a className="color" href="Menu">Menu</a>
-                            <a className="color" href="contact">Contact</a>
+                        
+                            <NavLink activeClassName="selected" to="/about" >About</NavLink>
+                            <NavLink activeClassName="selected" to="/menu" >Menu</NavLink>
+                            <NavLink activeClassName="selected" to="/contact">Contact</NavLink>
                         </div>
                     </div>
                 </div>

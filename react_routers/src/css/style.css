@@ -166,5 +166,8 @@ h4 {
     margin: 15px 0;
     color: #000;
 }
+.selected{
+    background-color: #ccc;
+}
 
 /*# sourceMappingURL=style.css.map */

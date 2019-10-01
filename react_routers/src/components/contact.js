@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './../css/style.css';
+import Nav from './Nav';
   
     
     class Contact extends React.Component {
@@ -10,20 +11,8 @@ import './../css/style.css';
              
                 
                   <div>
-  <div className="conteiner-fluid header fixed-top">
-    <div className=" row">
-      <div className="brand col">
-        <a className="color" href="index.html">Gourmet au Catering</a>
-      </div>
-      <div className=" row d-none d-sm-inline">
-        <div className="brand col ">
-            <a className="color" href="about.html">About</a>
-            <a className="color" href="a">Menu</a>
-            <a className="color" href="a">Contact</a>
-        </div>
-        </div>
-    </div>
-  </div>
+              
+  
   <div className="text  pd">
     <h1 style={{textAlign: 'left'}}>Contact</h1>
     <br />
