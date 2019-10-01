@@ -1,11 +1,49 @@
-import React from 'react';
+import React ,{Component} from 'react';
+import Redirect from 'react-router-dom/Redirect';
 
 import './../css/style.css';
 import Nav from './Nav';
   
     
     class Contact extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state ={
+        a :false,
+       
+      }
+    }
+    
+
+      summitForm = (e) => {
+          e.preventDefault();
+        this.setState({
+          a:true
+        });   
+      }
+
+isChange = (e) => {
+  const ten = e.target.name;
+  const giatri = e.target.value;
+  this.setState({
+    [ten]: giatri // dat state cho moi ten ta dat duoc voi gia tri tuong ung
+  });
+   
+}
+getValue = () => {
+  var noidung ="";
+  noidung+= "ten nhan duoc la: " + this.state.Name;
+  noidung += "People nhan duoc la:" + this.state.People;
+  return noidung;
+
+}
+
         render() {
+          if (this.state.a) {
+            console.log(this.getValue());
+            
+            return <Redirect to="/" />
+          }
             return (
               
              
@@ -28,12 +66,12 @@ import Nav from './Nav';
       email catering@catering.com, or you can send us a
       message here:</p>
     <div className="text ">
-      <form action="a" target="_blank">
-        <p><input className="form" type="text" placeholder="Name" required name="Name" /></p>
-        <p><input className="form" type="number" placeholder="How many people" required name="People" /></p>
-        <p><input className="form" type="datetime-local" placeholder="Date and time" required name="date" defaultValue="2017-11-16T20:00" /></p>
-        <p><input className="form" type="text" placeholder="Message \ Special requirements" required name="Message" /></p>
-        <p><button className="form1" type="submit">SEND MESSAGE</button></p>
+      <form action="" target="_blank">
+        <p><input onChange ={(e)=> this.isChange(e)} className="form" type="text" placeholder="Name" required name="Name" /></p>
+        <p><input  onChange ={(e)=> this.isChange(e)}className="form" type="number" placeholder="How many people" required name="People" /></p>
+        <p><input onChange ={(e)=> this.isChange(e)}  className="form" type="datetime-local" placeholder="Date and time" required name="date" defaultValue="2017-11-16T20:00" /></p>
+        <p><input  onChange ={(e)=> this.isChange(e)} className="form" type="text" placeholder="Message \ Special requirements" required name="Message" /></p>
+                      <p><button className="form1" type="submit" onClick={(e) => this.summitForm(e)}>SEND MESSAGE</button></p>
       </form>
     </div>
   </div>
