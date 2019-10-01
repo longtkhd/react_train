@@ -3,10 +3,12 @@ import React from 'react';
 import './../css/style.css';
   
     
-    class contact extends React.Component {
+    class Contact extends React.Component {
         render() {
             return (
-                <div>
+              
+             
+                
                   <div>
   <div className="conteiner-fluid header fixed-top">
     <div className=" row">
@@ -48,7 +50,7 @@ import './../css/style.css';
   </div>
 </div>
 
-                </div>
+               
             )
         }
     }
@@ -59,4 +61,4 @@ import './../css/style.css';
 
 
 
-export default contact;
+export default Contact;
